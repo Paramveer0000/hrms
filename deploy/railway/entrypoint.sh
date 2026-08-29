@@ -8,7 +8,7 @@ bench set-config -gp db_port "$DB_PORT"
 bench set-config -g redis_cache "$REDIS_CACHE_URL"
 bench set-config -g redis_queue "$REDIS_QUEUE_URL"
 bench set-config -g redis_socketio "$REDIS_QUEUE_URL"
-printf 'frappe\nhrms\n' > sites/apps.txt
+printf 'frappe\nerpnext\nhrms\n' > sites/apps.txt
 if [ ! -d "sites/$SITE_NAME" ]; then
   bench new-site "$SITE_NAME" --mariadb-user-host-login-scope='%' --admin-password "$ADMIN_PASSWORD" --db-root-username root --db-root-password "$MARIADB_ROOT_PASSWORD" --install-app hrms --set-default
 else
