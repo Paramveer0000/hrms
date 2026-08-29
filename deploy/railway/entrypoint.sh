@@ -15,5 +15,5 @@ else
   bench --site "$SITE_NAME" migrate
 fi
 bench setup procfile
-sed -i '/^redis_cache:/d; /^redis_queue:/d' Procfile
+sed -i '/^redis_cache:/d; /^redis_queue:/d; /^watch:/d' Procfile
 exec bench start
