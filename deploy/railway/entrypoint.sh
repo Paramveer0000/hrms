@@ -14,4 +14,5 @@ if [ ! -d "sites/$SITE_NAME" ]; then
 else
   bench --site "$SITE_NAME" migrate
 fi
+bench setup procfile
 exec bench start
